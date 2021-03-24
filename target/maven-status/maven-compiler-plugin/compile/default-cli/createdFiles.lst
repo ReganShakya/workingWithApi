@@ -1,0 +1,9 @@
+com\web\restapi\dao\CourseDao.class
+com\web\restapi\dao\Sql2oCourseDao.class
+com\web\restapi\exc\ApiError.class
+com\web\restapi\exc\DaoException.class
+com\web\restapi\Review.class
+com\web\restapi\model\Api.class
+com\web\restapi\Course.class
+com\web\restapi\dao\Sql2oReviewDao.class
+com\web\restapi\dao\ReviewDao.class

@@ -14,12 +14,12 @@ import java.util.Objects;
 public class Review {
     
     private int id;
-    private int courseId;
+    private int course_id;
     private int rating;
     private String comment;
 
     public Review(int courseId, int rating, String comment){
-        this.courseId = courseId;
+        this.course_id = courseId;
         this.rating = rating;
         this.comment = comment;
     }
@@ -33,11 +33,11 @@ public class Review {
     }
     
     public int getCourseId() {
-        return courseId;
+        return course_id;
     }
 
     public void setCourseId(int courseId) {
-        this.courseId = courseId;
+        this.course_id = courseId;
     }
 
     public int getRating() {
@@ -59,7 +59,7 @@ public class Review {
     @Override
     public int hashCode() {
         int hash = id;
-        hash = 29 * hash + this.courseId;
+        hash = 29 * hash + this.course_id;
         hash = 29 * hash + this.rating;
         hash = 29 * hash + Objects.hashCode(this.comment);
         return hash;
@@ -77,7 +77,7 @@ public class Review {
         if(id != other.id){
             return false;
         }
-        if (this.courseId != other.courseId) {
+        if (this.course_id != other.course_id) {
             return false;
         }
         if (this.rating != other.rating) {

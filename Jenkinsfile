@@ -17,4 +17,9 @@ pipeline {
             }
         }
     }
+    post {
+    success {
+      mail to: reganshakya@gmail.com, subject: ‘The Pipeline success...‘
+    }
+  }
 }

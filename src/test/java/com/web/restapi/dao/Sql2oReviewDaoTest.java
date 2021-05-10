@@ -78,7 +78,7 @@ public class Sql2oReviewDaoTest {
     public void testFindByCourseId() {
         int id = 1;
         List<Review> review = reviewDao.findByCourseId(id);
-        assertNotNull(review);
+        assertTrue(review.size() > 0);
         assertEquals(review.get(0).getCourseId(), id);
     }
     

@@ -1,9 +1,10 @@
 /home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/exc/ApiError.java
 /home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/dao/CourseDao.java
+/home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/db/DbConfiguration.java
+/home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/model/Course.java
 /home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/exc/DaoException.java
 /home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/dao/ReviewDao.java
-/home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/Course.java
 /home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/dao/Sql2oReviewDao.java
-/home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/Review.java
-/home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/model/Api.java
+/home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/model/Review.java
 /home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/dao/Sql2oCourseDao.java
+/home/regan/NetBeansProjects/workingWithApi/src/main/java/com/web/restapi/Api.java

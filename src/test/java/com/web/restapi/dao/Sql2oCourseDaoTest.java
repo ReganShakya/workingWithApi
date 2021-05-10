@@ -70,7 +70,7 @@ public class Sql2oCourseDaoTest {
     @Test
     public void testFindById() {
         System.out.println("findById test");
-        int id = 4;
+        int id = 1;
         Course result = courseDao.findById(id);
         assertNotNull(result);
         assertEquals(result.getId(), id);

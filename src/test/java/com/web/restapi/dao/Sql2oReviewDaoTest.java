@@ -45,7 +45,7 @@ public class Sql2oReviewDaoTest {
     public void testAdd() throws Exception {
         System.out.println("add test");
         Review review = new Review();
-        review.setCourseId(4);
+        review.setCourseId(1);
         review.setRating(4);
         review.setComment("Spring is fun.");
         reviewDao.add(review);
@@ -76,7 +76,7 @@ public class Sql2oReviewDaoTest {
      */
     @Test
     public void testFindByCourseId() {
-        int id = 4;
+        int id = 1;
         List<Review> review = reviewDao.findByCourseId(id);
         assertNotNull(review);
         assertEquals(review.get(0).getCourseId(), id);

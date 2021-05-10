@@ -17,6 +17,9 @@ public class Review {
     private int course_id;
     private int rating;
     private String comment;
+    
+    public Review() {        
+    }
 
     public Review(int courseId, int rating, String comment){
         this.course_id = courseId;

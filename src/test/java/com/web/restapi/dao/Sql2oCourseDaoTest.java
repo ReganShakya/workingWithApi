@@ -41,18 +41,18 @@ public class Sql2oCourseDaoTest {
     /**
      * Test of add method, of class Sql2oCourseDao.
      */
-//    @Test
-//    public void testAdd() throws Exception {
-//        System.out.println("add test");
-//        Course course = new Course();
-//        course.setName("Spring");
-//        course.setUrl("www.spring.com");
-//        courseDao.add(course);
-//        Course addedCourse = courseDao.findByName("Spring");
-//        
-//        assertTrue(addedCourse.getId()>0);
-//        assertEquals(addedCourse.getName(), course.getName());
-//    }
+    @Test
+    public void testAdd() throws Exception {
+        System.out.println("add test");
+        Course course = new Course();
+        course.setName("Spring");
+        course.setUrl("www.spring.com");
+        courseDao.add(course);
+        Course addedCourse = courseDao.findByName("Spring");
+        
+        assertTrue(addedCourse.getId()>0);
+        assertEquals(addedCourse.getName(), course.getName());
+    }
 
     /**
      * Test of findAll method, of class Sql2oCourseDao.
@@ -62,8 +62,6 @@ public class Sql2oCourseDaoTest {
         System.out.println("findAll test");
         List<Course> result = courseDao.findAll();
         assertTrue(result.size() > 0);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -76,8 +74,6 @@ public class Sql2oCourseDaoTest {
         Course result = courseDao.findById(id);
         assertNotNull(result);
         assertEquals(result.getId(), id);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
     
     @Test

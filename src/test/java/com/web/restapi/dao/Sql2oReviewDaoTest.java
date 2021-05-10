@@ -41,25 +41,25 @@ public class Sql2oReviewDaoTest {
     /**
      * Test of add method, of class Sql2oReviewDao.
      */
-//    @Test
-//    public void testAdd() throws Exception {
-//        System.out.println("add test");
-//        Review review = new Review();
-//        review.setCourseId(4);
-//        review.setRating(4);
-//        review.setComment("Spring is fun.");
-//        reviewDao.add(review);
-//        Review addedReview = null;
-//        List<Review> addedReviews = reviewDao.findAll();
-//        for(Review rev:addedReviews) {
-//            if(rev.getComment().equals("Spring is fun.")){
-//                addedReview = rev;
-//                break;
-//            }
-//        }
-//        assertNotNull(addedReview);
-//        assertEquals(addedReview.getComment(),"Spring is fun.");
-//    }
+    @Test
+    public void testAdd() throws Exception {
+        System.out.println("add test");
+        Review review = new Review();
+        review.setCourseId(4);
+        review.setRating(4);
+        review.setComment("Spring is fun.");
+        reviewDao.add(review);
+        Review addedReview = null;
+        List<Review> addedReviews = reviewDao.findAll();
+        for(Review rev:addedReviews) {
+            if(rev.getComment().equals("Spring is fun.")){
+                addedReview = rev;
+                break;
+            }
+        }
+        assertNotNull(addedReview);
+        assertEquals(addedReview.getComment(),"Spring is fun.");
+    }
 
     /**
      * Test of findAll method, of class Sql2oReviewDao.

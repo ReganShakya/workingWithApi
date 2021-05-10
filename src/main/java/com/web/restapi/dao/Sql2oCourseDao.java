@@ -5,7 +5,7 @@
  */
 package com.web.restapi.dao;
 
-import com.web.restapi.Course;
+import com.web.restapi.model.Course;
 import com.web.restapi.exc.DaoException;
 import java.util.List;
 import org.sql2o.Connection;
@@ -51,6 +51,15 @@ public class Sql2oCourseDao implements CourseDao{
         try(Connection con = sql2o.open()){
             return con.createQuery("SELECT * FROM courses WHERE id = :id")
                     .addParameter("id", id)
+                    .executeAndFetchFirst(Course.class);
+        }
+    }
+
+    @Override
+    public Course findByName(String name) {
+        try(Connection con = sql2o.open()){
+            return con.createQuery("SELECT * FROM courses WHERE name = :name")
+                    .addParameter("name", name)
                     .executeAndFetchFirst(Course.class);
         }
     }

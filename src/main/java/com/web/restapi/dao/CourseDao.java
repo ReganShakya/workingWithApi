@@ -6,7 +6,7 @@
 package com.web.restapi.dao;
 
 import com.web.restapi.exc.DaoException;
-import com.web.restapi.Course;
+import com.web.restapi.model.Course;
 import java.util.List;
 
 /**
@@ -18,4 +18,6 @@ public interface CourseDao {
     List<Course> findAll();
 
     public Course findById(int id);
+    
+    public Course findByName(String name);
 }

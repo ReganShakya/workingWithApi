@@ -5,7 +5,7 @@
  */
 package com.web.restapi.dao;
 
-import com.web.restapi.Review;
+import com.web.restapi.model.Review;
 import com.web.restapi.exc.DaoException;
 import java.util.List;
 

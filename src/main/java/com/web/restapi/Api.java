@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.web.restapi.model;
+package com.web.restapi;
 
 import com.google.gson.Gson;
-import com.web.restapi.Course;
-import com.web.restapi.Review;
+import com.web.restapi.model.Course;
+import com.web.restapi.model.Review;
 import com.web.restapi.dao.CourseDao;
 import com.web.restapi.dao.ReviewDao;
 import com.web.restapi.dao.Sql2oCourseDao;
 import com.web.restapi.dao.Sql2oReviewDao;
+import com.web.restapi.db.DbConfiguration;
 import com.web.restapi.exc.ApiError;
 import com.web.restapi.exc.DaoException;
 import java.util.HashMap;
@@ -26,22 +27,9 @@ import static spark.Spark.*;
 public class Api {
 
     public static void main(String[] args) {
-        String datasourse = "jdbc:h2:~/reviews.db";
-        if (args.length > 0) {
-            if (args.length != 2) {
-                System.out.println("java Api <port> <datasource>");
-                System.exit(0);
-            }
-            port(Integer.parseInt(args[0]));
-            datasourse = args[1];
-        }
 
-        Sql2o sql2o = new Sql2o(
-                String.format("%s;INIT=RUNSCRIPT from 'classpath:db/init.sql'", datasourse),
-                 "", "");
-
-        ReviewDao reviewDao = new Sql2oReviewDao(sql2o);
-        CourseDao courseDao = new Sql2oCourseDao(sql2o);
+        ReviewDao reviewDao = new Sql2oReviewDao(DbConfiguration.getConnetion());
+        CourseDao courseDao = new Sql2oCourseDao(DbConfiguration.getConnetion());
         Gson gson = new Gson();
 
         get("/hello", (req, res) -> "Hello World");

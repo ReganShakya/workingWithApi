@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.web.restapi;
+package com.web.restapi.model;
 
 import java.util.Objects;
 
